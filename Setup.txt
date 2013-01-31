@@ -1,0 +1,29 @@
+Needed for scanner hardware:
+
+**Parts:**
+Arduino
+Servo motor
+Power source
+Turn Table
+Webcam
+Laptop
+laser pointer
+Various electronic parts
+
+**Software:**
+Arduino
+Processing
+3D modeling/rendering file that can convert .csv files to .obj or .stl files.
+
+Instructions:
+
+Step 1: Build your hardware: 
+Build a turn table connected to a servo motor (so that the servo can contorl the spinning og the turn table). Connect webcam to center of the turn table, and along the same plane, attach the laser level, like in this image: http://a1.4ormat.com/vfs/15349/thumbs/537165/900x0.JPG
+
+Set up your circuit to contorl the servo: http://arduino.cc/en/Tutorial/Sweep. Note that you probably need to edit this circuit to accommodate your power source for the servo-- for example, I was using a 12V servo and needed to hack a laptop charger into this circuit (I just used it instead of the 5V connection in the above circuit).
+
+Take the whole set up and place it in the exact middle of your interior space, (for best results).
+
+Step 2: Software:
+Upload the arduino sketch to your board. Close and quit Arduino so you can open Processing, (this step is important-- wonky things happen when Arduino and Processing run at the same time). Get your hardware ready to run, (plug in your power source and hook your webcam into your computer, turn on the laser level and turn the lights off). Run the sketch-- the servo will rotate 360 degrees. Processing will have saved a text file in your sketch folder. Open your 3D modeling software (I used Rhino) and import the created .txt as a .csv file. There's your rough scan.
+
